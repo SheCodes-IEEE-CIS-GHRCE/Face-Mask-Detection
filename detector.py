@@ -4,10 +4,15 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 import numpy as np
+import sys
  
 cascPath = "haarcascade_frontalface_alt2.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 model = load_model("mask_detection.h5")
+count_m=0
+count_wm=0
+count_p_m=0
+count_p_wm=0
 
 import speech_recognition as sr # importing speech recognition package from google api
 # from pygame import mixer
@@ -16,7 +21,6 @@ from gtts import gTTS # google text to speech
 import os
 num=1
 video_capture=0
-print("Say Hi! when speak is printed")
 def assistant_speaks(output):
  global num
  num +=1
@@ -44,10 +48,12 @@ def get_audio():
 
  
 def camera():
-    global video_capture
+    global video_capture, count_m, count_wm,count_p_w,count_p_wm
     cam=True
     count_wm=0
     count_m=0
+    count_p_wm=0
+    count_p_m=0
     video_capture = cv2.VideoCapture(0)
     while (cam):
         # Capture frame-by-frame
@@ -80,12 +86,13 @@ def camera():
                 if count_m>25:
                     assistant_speaks("Great! You have got your mask on! Kindly use the santizer!")
                     cam=False
+                    count_p_m+=1
             if max(mask,withoutMask)*100>95 and label=="No Mask":
                 
                 count_wm+=1
                 if count_wm>25:
                     assistant_speaks("Kindly wear a mask! Your not allowed to enter the premesis!")
-                    
+                    count_p_wm+=1
                     cam=False
             label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
             cv2.putText(frame, label, (x, y- 10),
@@ -96,22 +103,34 @@ def camera():
         if cv2.waitKey(1) and 0xFF == ord('q'):
             break
 
+def voice():
+    while(1):
+        text = get_audio().lower()
+        if text == 0:
+            continue
+        if "hi" in str(text) or "hai" in str(text):
+            camera()
+            count_m=0
+            count_wm=0
+            video_capture.release()
+            cv2.destroyAllWindows()
+            break
 
 
 
 
+from tkinter import *
+top = Tk()   
+top.geometry("600x800")
+top.configure(background="salmon")
+name = Label(top, text = "ARE YOU WEARING A MASK? CLICK ON THE BUTTON AND SAY HI!").place(x = 120,y = 50)
+photo = PhotoImage(file = "speak.png")
+b1=Button(top, text="DETECT MASKS", command=voice,image=photo,fg='black',bg='turquoise4',font=('times',15,'bold')).place(x=50,y=100)
+b2=Button(top, text="EXIT", command=top.destroy, fg='black',bg='turquoise4',font=('times',15,'bold')).place(x=250,y=650) 
+top.mainloop()
 
-while(1):
- text = get_audio().lower()
- if text == 0:
-     continue
- if "hi" in str(text) or "hai" in str(text):
-     camera()
-     count_m=0
-     count_wm=0
-     video_capture.release()
-     cv2.destroyAllWindows()
-     break
+
+
      
  
 
