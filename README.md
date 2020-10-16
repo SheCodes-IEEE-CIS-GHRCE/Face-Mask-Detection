@@ -14,6 +14,10 @@ This is a real-time image classification project trained on the top of Keras/Ten
 <a href="https://drive.google.com/file/d/1Iro2nYpVpV3_M1ukq9m6mI9yr-4h4uay/view?usp=drivesdk"> DEMONSTRATION:woman_technologist: </a>
 <br></br>
 
+### PROCESS FLOW 
+<img src="https://github.com/SheCodes-IEEE-CIS-GHRCE/Face-Mask-Detection/blob/main/PROCESS%20FLOW.jpeg">
+<br></br>
+
 # Modules/ Packages required
 * numpy: Python library used for working with arrays. It also has functions for working in domain of linear algebra, fourier transform, and matrices.
 * matplotlib: Matplotlib is an amazing library for data visualization. It comes with a wide variety of plots. Plots helps to understand trends, patterns, and to make correlations.
