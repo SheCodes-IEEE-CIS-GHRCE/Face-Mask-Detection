@@ -27,7 +27,13 @@ This is a real-time image classification project trained on the top of Keras/Ten
 * tkinter: Tkinter is the standard GUI library for Python. Python when combined with Tkinter provides a fast and easy way to create GUI applications. 
 <
 # Technologies Used
+![](https://forthebadge.com/images/badges/made-with-python.svg)
 
+[<img target="_blank" src="https://keras.io/img/logo.png" width=200>](https://keras.io/) 
+
+[<img target="_blank" src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width=170>](https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png)
+
+[<img target="_blank" src="https://www.gstatic.com/devrel-devsite/prod/vbf66214f2f7feed2e5d8db155bab9ace53c57c494418a1473b23972413e0f3ac/tensorflow/images/lockup.svg" width=280>](https://www.gstatic.com/devrel-devsite/prod/vbf66214f2f7feed2e5d8db155bab9ace53c57c494418a1473b23972413e0f3ac/tensorflow/images/lockup.svg)
 
 
 
