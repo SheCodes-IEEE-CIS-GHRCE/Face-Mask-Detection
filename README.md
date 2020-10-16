@@ -10,7 +10,7 @@ India has been unlocking in phases. Malls, temples and other public places has b
 Now-a-days, entering any public premises is dangerous, with more possibilites of spreading of COVID-19. With respect to this problem, here comes our proposed system! The COVID-19 Face-Mask Detector. It is a real-time operating system, which detects if a person enetring the premises is wearing mask or not. If yes, its says, "Great! You have got your mask on! Kindly use sanitizer, have a great day!":thumbsup: and if you're not, "Kindly wear your mask! You are not allowed to enter!":thumbsdown:. <br/>The model we've build could be potentially used to ensure the saftey.
 
 # Desciption
-This is a real-time image classification project trained on the top of Keras/Tensorflow API with MobileNetV2. The model <a href="https://github.com/SheCodes-IEEE-CIS-GHRCE/Face-Mask-Detection/blob/main/TRAINING.ipynb"> TRAINING.ipynb</a> is trained with two datasets(link at the bottom) consiting of images with people weaing masks and people not wearing masks. Thus we obtained <a href="https://github.com/SheCodes-IEEE-CIS-GHRCE/Face-Mask-Detection/blob/main/mask_detection.h5"> mask_detection.h5 </a>, trained model. To run the detector, run <a href="https://github.com/SheCodes-IEEE-CIS-GHRCE/Face-Mask-Detection/blob/main/detector.py"> detector.py. </a> Detector starts, click on the start button to start detection, enter time to terminate your process and then detection will go on. Here is a demonstration by one of our teammate.
+This is a real-time image classification project trained on the top of Keras/Tensorflow API with MobileNetV2. The model <a href="https://github.com/SheCodes-IEEE-CIS-GHRCE/Face-Mask-Detection/blob/main/TRAINING.ipynb"> TRAINING.ipynb</a> is trained with two datasets(link at the bottom) consiting of images with people weaing masks and people not wearing masks. Thus we obtained <a href="https://github.com/SheCodes-IEEE-CIS-GHRCE/Face-Mask-Detection/blob/main/mask_detection.h5"> mask_detection.h5 </a>, trained model. To run the detector, run <a href="https://github.com/SheCodes-IEEE-CIS-GHRCE/Face-Mask-Detection/blob/main/detector.py"> detector.py. </a> Detector starts, click on the start button to start detection, enter time to terminate your process and then detection will go on. At the end of the day, sysytem will generate a pie chart showing how many people enetrin the premises were wearing maks and who were not. Piechart is stored in your local systems which can be used for future analysis.</br> Follow the <a href="https://drive.google.com/drive/folders/1xYgh4S8fPZMW2Q-umZ_6_MjenBrSWEKO?usp=sharing">GUIDELINES.</a></br>Here is a demonstration by one of our teammate.
 <a href="https://drive.google.com/file/d/1Iro2nYpVpV3_M1ukq9m6mI9yr-4h4uay/view?usp=drivesdk"> DEMONSTRATION:woman_technologist: </a>
 <br></br>
 
@@ -26,6 +26,12 @@ This is a real-time image classification project trained on the top of Keras/Ten
 * playsound: Module used to play audio files.
 * tkinter: Tkinter is the standard GUI library for Python. Python when combined with Tkinter provides a fast and easy way to create GUI applications. 
 <
+  
+# Team Members:footprints:
+* <a href="https://github.com/aditibodade">Aditi Bodade</a>
+* <a href="https://github.com/Sonali2824">Sonali Preetha Nandagopalan</a>
+* <a href="https://github.com/Mitaliii">Mitali Sahu</a>
+* <a href="https://github.com/NoorpreetKaur">Noorpreet Kaur</a>
 
 
 ## DATASET LINK:
